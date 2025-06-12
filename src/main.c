@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int int main( int argc, char *argv[] ) {
+#include "../lib/ui/tui.h"
+
+int main( int argc, char *argv[] ) {
 	
-		
-
+	tui();
 
 	return EXIT_SUCCESS;
 }
