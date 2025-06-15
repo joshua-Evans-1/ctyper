@@ -17,9 +17,5 @@ typedef struct uiCTX {
 	WINDOW *stateWin[NUM_STATES];
 } uiCTX;
 
-
-
-
 #endif
-
 

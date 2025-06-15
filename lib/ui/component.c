@@ -6,6 +6,7 @@
 #include "uiCTX.h"
 
 void status_line( uiCTX* uiCTX ) {
+
 	wattron( uiCTX->mainWin, A_REVERSE );
 	mvwprintw( uiCTX->mainWin, LINES - 1, 0, " %d ", uiCTX->state );
 	mvwprintw( uiCTX->mainWin, LINES - 1, 4, "%s", " time: 60s " );

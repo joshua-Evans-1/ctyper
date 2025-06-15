@@ -3,11 +3,9 @@
 #include <stdlib.h>
 #include <ncurses.h>
 
-
 #include "uiCTX.h"
 #include "uiDriver.h"
 #include "component.h"
-
 
 void init( uiCTX* uiCTX ) {
 	initscr();
@@ -64,15 +62,4 @@ const uiDriver driver = {
 	.draw = draw,
 	.readin = readin
 };
-
-
-
-
-
-
-
-
-
-
-
 
