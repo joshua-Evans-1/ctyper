@@ -20,11 +20,9 @@ void init( uiCTX* uiCTX ) {
 }
 
 void kill( uiCTX* uiCTX ) {
-
 	for( int i = 0; i < NUM_STATES; i++ ) {
 		delwin( uiCTX->stateWin[i] );
 	}
-
 	delwin( uiCTX->mainWin );
 }
 
@@ -35,14 +33,14 @@ void draw( uiCTX* uiCTX ) {
 	uiCTX->mainWin = newwin( LINES, COLS, 0, 0 );
 	for ( int i = 0; i < NUM_STATES; i++ ) {
 		uiCTX->stateWin[i] = newwin( LINES / 4 * 3, COLS / 4 * 3, LINES / 8, COLS / 8 );
-		box( uiCTX->stateWin[i], 0, 0 );
-		wrefresh( uiCTX->stateWin[i] );
 	}
-	
+		
 	status_line( uiCTX );
-	wrefresh( uiCTX->mainWin );
-	mvwprintw( uiCTX->stateWin[uiCTX->state], 1, 1, " win: %d ", uiCTX->state );
-	wrefresh( uiCTX->stateWin[uiCTX->state] );
+	switch ( uiCTX->state ) {
+		case HELP_STATE: help_win( uiCTX ); break;
+		case MENU_STATE: menu_win( uiCTX ); break;
+		default: break;
+	}
 }
 
 int readin( uiCTX* uiCTX, int ch ) {

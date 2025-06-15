@@ -5,3 +5,8 @@
 #include "uiCTX.h"
 
 void status_line( uiCTX* uiCTX );
+
+void help_win( uiCTX* uiCTX );
+
+void menu_win( uiCTX* uiCTX );
+
