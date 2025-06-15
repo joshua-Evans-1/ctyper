@@ -5,7 +5,7 @@ CFLAGS = -Wall -Wextra -std=c11 -g
 LDFLAGS = -lncurses
 
 # Source files
-SRC = ../src/main.c ../lib/ui/tui.c
+SRC = ../src/main.c ../lib/ui/tui.c ../lib/ui/uiDriver.c ../lib/ui/component.c 
 
 # Object files
 OBJ = $(SRC:.c=.o)

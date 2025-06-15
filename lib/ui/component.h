@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <ncurses.h>
 
-#include "uiDriver.h"
 #include "uiCTX.h"
 
-void tui();
-
-
+void status_line( uiCTX* uiCTX );
