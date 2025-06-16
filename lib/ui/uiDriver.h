@@ -11,6 +11,8 @@ typedef struct uiDriver {
 	int ( *readin )( uiCTX*, int );
 } uiDriver;
 
+
+void create_wins( uiCTX* uiCTX );
 void init( uiCTX* uiCTX );
 void kill( uiCTX* uiCTX );
 void draw( uiCTX* uiCTX );
